@@ -35,12 +35,12 @@ PhpMyAdmin is accessible from : <http://localhost:5003/>
 There is a pre-embedded database.
 You can start by retreiving existant users, to use one of them for testing other APIs.
 
-I'll take **dhouha@maisonduweb.com/dhouha123** account, to explain how it works.
+I'll take **dhouha@company.com/dhouha123** account, to explain how it works.
 
 1. First of all, you need to generate a token using, POST /login route.
 by using json input for body param :
 ``{
-    "email": "dhouha@maisonduweb.com",
+    "email": "dhouha@company.com",
     "password": "dhouha123"
 }``
 
