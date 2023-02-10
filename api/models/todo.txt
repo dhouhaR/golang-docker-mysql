@@ -1,0 +1,6 @@
+ADD 2 models and use them on Task model
+
+Category    Category	`json:"category"`
+	CategoryID     uint32    `gorm:"not null" json:"category_id"`
+	Tag    Tag	`json:"tag"`
+	TagID     uint32    `gorm:"not null" json:"tag_id"`
