@@ -28,9 +28,7 @@ You are ready now to use the API.
 
 From the navigator visit  : <http://localhost:8080>
 
-[localhost](localhost_8080.png)
-
-phpMyadmin is accessible from : <http://localhost:5003/>
+PhpMyAdmin is accessible from : <http://localhost:5003/>
 
 ## Examples
 
@@ -68,6 +66,9 @@ Or to remove volumes also,
 ## TODO LIST
 
 Unit tests are not finished, I'll update the repository later.
+
 Status and categories are not yet implemented.
+
 Also some filters on retreiving Tasks are not yet implemented.
+
 Improve json output (ex : hide crypted password)
