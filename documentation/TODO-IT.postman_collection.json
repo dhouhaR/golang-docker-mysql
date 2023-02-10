@@ -1,0 +1,832 @@
+{
+	"info": {
+		"_postman_id": "9d0897e7-ac11-4b25-ae3a-42bd57a4e298",
+		"name": "TODO-IT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9774202"
+	},
+	"item": [
+		{
+			"name": "Manage Users",
+			"item": [
+				{
+					"name": "Retreive Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzU1NTE3MzgsInVzZXJfaWQiOjN9.zmNfQFytget7MSyxlvoDWFQWyQOUevgPl4A4n_kwKFo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retreive Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Feb 2023 14:30:36 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "420"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"username\": \"Riadh Rzig\",\n        \"email\": \"riadh@maisonduweb.com\",\n        \"created_at\": \"2023-02-10T14:30:26Z\",\n        \"updated_at\": \"2023-02-10T14:30:26Z\"\n    },\n    {\n        \"id\": 2,\n        \"username\": \"Sofien Slimi\",\n        \"email\": \"sofien@maisonduweb.com\",\n        \"created_at\": \"2023-02-10T14:30:26Z\",\n        \"updated_at\": \"2023-02-10T14:30:26Z\"\n    },\n    {\n        \"id\": 3,\n        \"username\": \"Dhouha Rhaiem\",\n        \"email\": \"dhouha@maisonduweb.com\",\n        \"created_at\": \"2023-02-10T14:30:26Z\",\n        \"updated_at\": \"2023-02-10T14:30:26Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Retreive a given User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retreive a given User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Feb 2023 14:28:12 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "137"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"username\": \"Riadh Rzig\",\n    \"email\": \"riadh@maisonduweb.com\",\n    \"created_at\": \"2023-02-10T14:28:10Z\",\n    \"updated_at\": \"2023-02-10T14:28:10Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzYwMzc0MTQsInVzZXJfaWQiOjN9.wLvCIs8C_OHdLzZKWL6SVKSiOhjt7xrBwm6arWxcC3Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"New user 1 \",\r\n    \"email\": \"user1@maisonduweb.com\",\r\n    \"Password\": \"test1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"New user 1 \",\r\n    \"email\": \"user1@maisonduweb.com\",\r\n    \"Password\": \"test1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Location",
+									"value": "localhost:8080/users/4"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Feb 2023 14:58:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"username\": \"New user 1\",\n    \"email\": \"user1@maisonduweb.com\",\n    \"password\": \"$2a$10$IW2xM6.6v99FKLXailCQluKmiJ8muII2cXLFyIaeZwoHTavLg9xV2\",\n    \"created_at\": \"2023-02-10T14:58:39.8211483Z\",\n    \"updated_at\": \"2023-02-10T14:58:39.8211498Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a given User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzYwNDYzMDEsInVzZXJfaWQiOjV9.uhNHUmvMFCeujRz2us-Zc3B2OeFSq_XO784dFRtm-AQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"dhouha rhaiem\",\r\n    \"email\": \"dhouha@maisonduweb.com\",\r\n    \"password\": \"dhouha123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a given User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzYwNDYwNjIsInVzZXJfaWQiOjN9.k55nrTLso8eQ9tEyXUxN8-YektMeTZ9yzZQp3z7RyO0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete a given User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"3"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Entity",
+									"value": "3"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Feb 2023 15:24:04 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Manage Tasks",
+			"item": [
+				{
+					"name": "Retreive Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retreive Tasks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/tasks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Feb 2023 14:32:06 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1135"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"content\": \"Support client 09h\",\n        \"author\": {\n            \"id\": 1,\n            \"username\": \"Riadh Rzig\",\n            \"email\": \"riadh@maisonduweb.com\",\n            \"created_at\": \"2023-02-10T14:30:26Z\",\n            \"updated_at\": \"2023-02-10T14:30:26Z\"\n        },\n        \"author_id\": 1,\n        \"created_at\": \"2023-02-10T14:30:26Z\",\n        \"updated_at\": \"2023-02-10T14:30:26Z\",\n        \"status\": \"\"\n    },\n    {\n        \"id\": 2,\n        \"content\": \"Workshop 10h\",\n        \"author\": {\n            \"id\": 2,\n            \"username\": \"Sofien Slimi\",\n            \"email\": \"sofien@maisonduweb.com\",\n            \"created_at\": \"2023-02-10T14:30:26Z\",\n            \"updated_at\": \"2023-02-10T14:30:26Z\"\n        },\n        \"author_id\": 2,\n        \"created_at\": \"2023-02-10T14:30:26Z\",\n        \"updated_at\": \"2023-02-10T14:30:26Z\",\n        \"status\": \"\"\n    },\n    {\n        \"id\": 3,\n        \"content\": \"Meeting 10h\",\n        \"author\": {\n            \"id\": 3,\n            \"username\": \"Dhouha Rhaiem\",\n            \"email\": \"dhouha@maisonduweb.com\",\n            \"created_at\": \"2023-02-10T14:30:26Z\",\n            \"updated_at\": \"2023-02-10T14:30:26Z\"\n        },\n        \"author_id\": 3,\n        \"created_at\": \"2023-02-10T14:30:26Z\",\n        \"updated_at\": \"2023-02-10T14:30:26Z\",\n        \"status\": \"\"\n    },\n    {\n        \"id\": 4,\n        \"content\": \"test add new task\",\n        \"author\": {\n            \"id\": 3,\n            \"username\": \"Dhouha Rhaiem\",\n            \"email\": \"dhouha@maisonduweb.com\",\n            \"created_at\": \"2023-02-10T14:30:26Z\",\n            \"updated_at\": \"2023-02-10T14:30:26Z\"\n        },\n        \"author_id\": 3,\n        \"created_at\": \"2023-02-10T14:31:44Z\",\n        \"updated_at\": \"2023-02-10T14:31:44Z\",\n        \"status\": \"\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Retreive a given Task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tasks/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tasks",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retreive a given Task",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/tasks/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"tasks",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Feb 2023 14:32:57 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "284"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"content\": \"Support client 09h\",\n    \"author\": {\n        \"id\": 1,\n        \"username\": \"Riadh Rzig\",\n        \"email\": \"riadh@maisonduweb.com\",\n        \"created_at\": \"2023-02-10T14:30:26Z\",\n        \"updated_at\": \"2023-02-10T14:30:26Z\"\n    },\n    \"author_id\": 1,\n    \"created_at\": \"2023-02-10T14:30:26Z\",\n    \"updated_at\": \"2023-02-10T14:30:26Z\",\n    \"status\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzYwMzk2OTEsInVzZXJfaWQiOjN9.ASzGmrtuk7zYA3Kx4eagVLRgFKM2cVIJMgef4-3QqRc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Content\": \"test add new task\",\r\n    \"author_id\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Content\": \"test add new task\",\r\n    \"author_id\":3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/tasks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Lacation",
+									"value": "localhost:8080/tasks/4"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Feb 2023 14:31:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "302"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"content\": \"test add new task\",\n    \"author\": {\n        \"id\": 3,\n        \"username\": \"Dhouha Rhaiem\",\n        \"email\": \"dhouha@maisonduweb.com\",\n        \"created_at\": \"2023-02-10T14:30:26Z\",\n        \"updated_at\": \"2023-02-10T14:30:26Z\"\n    },\n    \"author_id\": 3,\n    \"created_at\": \"2023-02-10T14:31:44.098711Z\",\n    \"updated_at\": \"2023-02-10T14:31:44.0987133Z\",\n    \"status\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a given Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzYwNDQzNTIsInVzZXJfaWQiOjN9.6kF0mDdkW2eUOeRcdw4FPCk5SnfsOxIDlo7yRCI_35o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Content\": \"edit Content\",\r\n    \"author_id\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tasks/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tasks",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit a given Task",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Content\": \"edit Content\",\r\n    \"author_id\":3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/tasks/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"tasks",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Feb 2023 14:53:20 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "372"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"content\": \"edit Content\",\n    \"author\": {\n        \"id\": 3,\n        \"username\": \"Dhouha Rhaiem\",\n        \"email\": \"dhouha@maisonduweb.com\",\n        \"password\": \"$2a$10$YZH1hRNQTJuTFbhK2XfKMu/m5C3PFOSa8PJDS7f/AY3HbSb6jt.X2\",\n        \"created_at\": \"2023-02-10T14:52:18Z\",\n        \"updated_at\": \"2023-02-10T14:52:18Z\"\n    },\n    \"author_id\": 3,\n    \"created_at\": \"2023-02-10T14:53:20.6785657Z\",\n    \"updated_at\": \"2023-02-10T14:53:20.6785675Z\",\n    \"status\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a given Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzYwMzk2OTEsInVzZXJfaWQiOjN9.ASzGmrtuk7zYA3Kx4eagVLRgFKM2cVIJMgef4-3QqRc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tasks/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tasks",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete a given Task",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/tasks/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"tasks",
+										"4"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Entity",
+									"value": "4"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Feb 2023 14:32:37 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "home",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Feb 2023 13:28:35 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						}
+					],
+					"cookie": [],
+					"body": "\"Welcome To TODO IT API\""
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"dhouha@maisonduweb.com\",\r\n    \"Password\": \"dhouha123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"dhouha@maisonduweb.com\",\r\n    \"password\": \"dhouha123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Feb 2023 13:22:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "148"
+						}
+					],
+					"cookie": [],
+					"body": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NzYwMzg5NTYsInVzZXJfaWQiOjN9.VA5EU3SVzhrtSR1p168DQ2d8dqzd5tAk-7ilsYYpoDQ\""
+				}
+			]
+		}
+	]
+}

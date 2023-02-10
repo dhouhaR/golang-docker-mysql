@@ -68,6 +68,7 @@ func (server *Server) GetUser(w http.ResponseWriter, r *http.Request) {
 	}
 	user := models.User{}
 	userGotten, err := user.FindUserByID(server.DB, uint32(uid))
+	userGotten.Password = ""
 	if err != nil {
 		responses.ERROR(w, http.StatusBadRequest, err)
 		return
@@ -111,6 +112,7 @@ func (server *Server) UpdateUser(w http.ResponseWriter, r *http.Request) {
 	}
 	updatedUser, err := user.UpdateAUser(server.DB, uint32(uid))
 	if err != nil {
+		//fmt.Println(err)
 		formattedError := formaterror.FormatError(err.Error())
 		responses.ERROR(w, http.StatusInternalServerError, formattedError)
 		return
