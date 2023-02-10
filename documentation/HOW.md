@@ -27,9 +27,10 @@ From command line, under the _**golang-docker-todo**_ folder execute
 You are ready now to use the API.
 
 From the navigator visit  : <http://localhost:8080>
-![localhost](/images/localhost_8080.png "localhost")
 
-phpMyadmin is accesible from : <http://localhost:5003/>
+[localhost](localhost_8080.png)
+
+phpMyadmin is accessible from : <http://localhost:5003/>
 
 ## Examples
 
@@ -50,7 +51,7 @@ Sample result : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLC
 2. Use this token to retreive all tasks created by this account:
 GET /Tasks
 
-3. For more examples you could import the postman collection : ![TODO-IT-Collection](TODO-IT.postman_collection.json)
+3. For more examples you could import the postman collection : [TODO-IT-Collection](TODO-IT.postman_collection.json)
 
 ## Shutting down APP
 
