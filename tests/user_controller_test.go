@@ -217,7 +217,7 @@ func TestUpdateUser(t *testing.T) {
 			id:             strconv.Itoa(int(AuthID)),
 			updateJSON:     `{"username":"Christophe", "email": "christophe@mycompany.com", "password": "password"}`,
 			statusCode:     200,
-			updateUsername: "Grand",
+			updateUsername: "Christophe",
 			updateEmail:    "christophe@mycompany.com",
 			tokenGiven:     tokenString,
 			errorMessage:   "",
