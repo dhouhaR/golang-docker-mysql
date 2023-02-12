@@ -63,9 +63,13 @@ Or to remove volumes also,
 
 * docker system prune : to remove dangling image
 
+## Execute Tests
+
+Lunch this command : docker-compose -f docker-compose.test.yml up --build --abort-on-container-exit
+
 ## TODO LIST
 
-Unit tests are not finished, I'll update the repository later.
+Unit tests are not finished, I'll update the repository later. -> **DONE**
 
 Status and categories are not yet implemented.
 
