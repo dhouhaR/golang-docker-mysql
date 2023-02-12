@@ -10,6 +10,9 @@ ADD . .
 
 RUN go mod download
 
+#todo : test that
+#RUN go get github.com/githubnemo/CompileDaemon
+#ENTRYPOINT CompileDaemon  -command="./golang-docker-todo"
 ENTRYPOINT go build  && ./golang-docker-todo
 
 # Expose port 8080 to the outside world
